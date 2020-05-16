@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
-public class PizzaPatterns extends JFrame {
+public class Main extends JFrame {
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -21,7 +21,7 @@ public class PizzaPatterns extends JFrame {
 	private PizzaFactory factory;
 	private PizzaToppingsFactory toppingsFactory;
 	
-	public PizzaPatterns(PizzaFactory factory, PizzaToppingsFactory toppingsFactory) {
+	public Main(PizzaFactory factory, PizzaToppingsFactory toppingsFactory) {
 		
 		this.factory = factory;
 		this.toppingsFactory = toppingsFactory;
@@ -79,7 +79,7 @@ public class PizzaPatterns extends JFrame {
 		PizzaToppingsDecoratorFactory decoratorFactory = new PizzaToppingsDecoratorFactory();
 		PizzaToppingsFactory toppingsFactory = new PizzaToppingsFactory(decoratorFactory);
 			
-		PizzaPatterns pizzaShop = new PizzaPatterns(pizzaFactory, toppingsFactory);
+		Main pizzaShop = new Main(pizzaFactory, toppingsFactory);
 		
 		JFrame frame = new JFrame("Menu");
 		frame.setSize(500,700);
